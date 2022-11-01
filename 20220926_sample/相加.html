@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const input1 = prompt()
+    const input2 = prompt()
+
+    const regex = /\D/g
+
+    if (input1.match(regex) || input2.match(regex)) {
+      alert('輸入錯誤')
+    } else {
+      const result = parseInt(input1) + parseInt(input2)
+      document.write(result)
+    }
+  </script>
+</body>
+</html>

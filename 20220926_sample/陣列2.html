@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const numbers = [100, 200, 300, 400, 500]
+    const hasMoreThan300 = numbers.some(number => {
+      return number > 300
+    })
+    console.log(hasMoreThan300)
+
+    const allMoreThan300 = numbers.every(number => {
+      return number > 300
+    })
+    console.log(allMoreThan300)
+
+    const find300 = numbers.find(number => {
+      return number > 300
+    })
+    console.log(find300)
+
+    const findIndex300 = numbers.findIndex(number => {
+      return number > 300
+    })
+    console.log(findIndex300)
+
+    const findLast300 = numbers.findLast(number => {
+      return number > 300
+    })
+    console.log(findLast300)
+
+    const findLastIndex300 = numbers.findLastIndex(number => {
+      return number > 300
+    })
+    console.log(findLastIndex300)
+
+    const filter300 = numbers.filter(number => {
+      return number > 300
+    })
+    console.log(filter300)
+
+    const map300 = numbers.map(number => {
+      return number * 2
+    })
+    console.log(map300)
+
+    const data = [
+      { name: 'John', age: 18 },
+      { name: 'Mary', age: 20 },
+      { name: 'Bob', age: 22 },
+      { name: 'Tom', age: 24 },
+      { name: 'Jack', age: 26 },
+    ]
+    const mapName = data.map(item => {
+      item.age *= 2
+      item.job = 'Student'
+      return item
+    })
+    console.table(mapName)
+
+    const reduce300 = numbers.reduce((total, number) => {
+      console.log(total, number)
+      return total + number
+    }, 500)
+    console.log(reduce300)
+
+    const numbers2 = [100, 500, 400, 200, 300, 800, 700, 100]
+    numbers2.sort((a, b) => {
+      console.log(a, b)
+      // a - b > 0，a 排在 b 後面
+      // a - b < 0，a 排在 b 前面
+      // a - b = 0，a b 位置不變
+      return a - b
+    })
+    console.log(numbers2)
+    numbers2.sort((a, b) => {
+      console.log(a, b)
+      // a - b > 0，a 排在 b 後面
+      // a - b < 0，a 排在 b 前面
+      // a - b = 0，a b 位置不變
+      return b - a
+    })
+    console.log(numbers2)
+
+    let texts = ['123', 'Abcd', 'abc', 'CDE', 'ssdf', '789', '456']
+    texts.sort((a, b) => {
+      // localeCompare 比較字元編碼順序
+      // a 在 b 前是 -1
+      // a 在 b 後是 1
+      // a b 相同是 0
+      return a.localeCompare(b)
+    })
+    console.log(texts)
+
+    let texts2 = ['一', '四', '二', '五', '三', '七', '六', '八', '十', '九']
+    texts2.sort((a, b) => {
+      return a.localeCompare(b, 'zh-Hant')
+    })
+    console.log(texts2)
+  </script>
+</body>
+</html>

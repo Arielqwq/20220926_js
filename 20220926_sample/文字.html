@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let text1 = '  abcdAb kflGLKS GLKSjkljkl jLKJK   '
+    // text1 = text1.trim()
+    // console.log(text1)
+    // text1 = text1.toUpperCase()
+    // console.log(text1)
+    // text1 = text1.toLowerCase()
+    // console.log(text1)
+    text1 = text1.trim().toUpperCase().toLowerCase()
+    console.log(text1)
+
+    let text2 = '外賣 咖哩拌飯 咖哩蓋飯'
+
+    let hasCurry = text2.includes('咖哩')
+    if (hasCurry) console.log('有咖哩')
+    else console.log('沒咖哩')
+
+    // .match(Regex)
+    // 有找到會回傳陣列，沒找到會回傳null
+    let matchCurry = text2.match(/咖哩/g)
+    console.log(matchCurry)
+    
+    let matchAllCurry = text2.matchAll(/咖哩/g)
+    console.log(matchAllCurry)
+    for (const match of matchAllCurry) {
+      console.log(match)
+    }
+
+    let indexCurry = text2.indexOf('咖哩')
+    console.log(indexCurry)
+
+    let xmas = 'Today is Xmas, Happy Xmas'
+    let xmasReplace = xmas.replace('Xmas', 'Christmas')
+    console.log(xmasReplace)
+    let xmasReplaceRegex = xmas.replace(/Xmas/g, 'Christmas')
+    console.log(xmasReplaceRegex)
+
+    let email = 'My email is asdasd1234@asdasd.com'
+    let emailreplace = email.replace(/([a-zA-Z1-9]+)@([a-zA-Z1-9]+)\.com/g, '我的信箱是 $1@$2.tw')
+    console.log(emailreplace)
+
+    let text3 = 'abcdefg'
+    // substr(開始, 長度)
+    let text3substr = text3.substr(2, 3)
+    console.log(text3substr)
+    // substring(開始, 結束)
+    // 不包含結束
+    let text3substring = text3.substring(2, 5)
+    console.log(text3substring)
+    // slice(開始, 結束)
+    // 不包含結束
+    let text3slice = text3.slice(-6, -2)
+    console.log(text3slice)
+
+    let text3int = parseInt(text3)
+    console.log(text3int)
+    console.log(text3int === NaN)
+    console.log(isNaN(text3int))
+
+    let filename = 'aaa.bbb.jpg'
+    let filenameext = filename.split('.').at(-1)
+    console.log(filenameext)
+  </script>
+</body>
+</html>
